@@ -115,14 +115,60 @@ main{
     font-weight:700 ;
 } 
 
+/* feature section style */
+.feature{
+    margin-top:130px;
+    display: flex;
+    gap:100px;
+}
+
+.feature .section-title{
+    border-left:5px solid #ff900e ;
+    padding-left: 20px;
+}
+.feature-content .card{
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+}
+
+.feature-img img{
+    height: 90%;
+    margin-left: 90px;
+}
+
+
+.years-badges{
+    border-radius: 8px;
+    background-color: #ff900e;
+    color:#fff;
+    width:340px;
+    padding:40px;
+    text-align: center;
+    position: relative;
+    bottom:100px ;
+}
+
+.years-badges h2{
+    font-size: 4rem;
+    margin:0;
+}
+
+.years-badges p{
+    font-size: 1.5rem;
+    margin:0;
+}
+
+
+
 /* fact card section */
 
 .fact-card-container{
     display: flex;
     justify-content: space-around;
 }
-
-
 
 .fact-card-container .card{
     border-radius:8px;
@@ -164,6 +210,14 @@ main{
     Width:165px;
 }
 
+/* footer container */
+.footer p{
+    text-align:center;
+    background-color: burlywood;
+    padding: 30px;
+    margin-top: 0;
+}
+
 
 
 /* Responsive media queries */
@@ -172,27 +226,47 @@ main{
     header{
         padding:20px;
     }
-    nav,.sponsors-img-container
+    main{
+        margin:40px 0;
+    }
+    nav,
+    .fact-card-container,
+    .sponsors-img-container,
+    .feature
     {
         flex-direction: column;
     }
+
+    .feature-img img{
+        margin:0;
+        width:90%;
+    }
+
+    .years-badges{
+        position: static;
+        max-width: 300px;
+    }
+
     .teams-content{
         padding:0 20px;
+       
     }
     .teams-container{
         flex-direction:column-reverse ;
     }
     .teams-img-container{
         margin-top: 20px;
+        /* margin-bottom: 0; */
         grid-template-columns: repeat(1,1fr);
         gap:24px;
     }
     .fact-card-container{
-        flex-direction: column;
         padding:0 20px;
         gap:20px;
     }
-
+    .footer{
+       max-width:100%;
+    }
 }
 
 
@@ -204,7 +278,7 @@ main{
      header{
         padding:50px;
     } 
-    nav,  .teams-container,  .sponsors-img-container{
+    nav, .teams-container, .sponsors-img-container, .feature{
         flex-direction: column;
     }
 }
